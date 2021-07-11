@@ -2,7 +2,7 @@ pipeline {
 
       environment {
 
-       registry = 'https://hub.docker.com/repository/docker/arifhussain123/docker_cicd'
+       registry = "arifhussain123/docker_cicd"
        credentialid = 'dockerhub'
          dockerImage = ''
                     }
