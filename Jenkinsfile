@@ -38,7 +38,7 @@ agent any
                steps {
                   script {
                      docker.withRegistry('', credentialid) {
-                            dockerimage.run()
+                            dockerImage.run()
                     }
                   }
                 }
