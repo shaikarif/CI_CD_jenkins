@@ -1,7 +1,6 @@
 FROM jenkins/jenkins:latest
 
-WORKDIR /app
-
+WORKDIR /
 
 COPY test ./
 CMD ['/bin/sh', '10']
