@@ -46,7 +46,7 @@ agent any
               }
             stage('stopping containers') {
                  steps {
-                      sh "docker stop \$(docker ps -q)"
+                      sh "docker stop ${docker ps -all}"
                     }
                   }
             stage('Cleaning up') { 
