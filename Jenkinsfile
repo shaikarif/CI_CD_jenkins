@@ -4,7 +4,7 @@ pipeline {
                     }
 agent any 
       stages {
-         stage(cloning our git) {
+         stage(cloning  git) {
             
           steps {
          git 'https://github.com/shaikarif/CI_CD_jenkins.git'
