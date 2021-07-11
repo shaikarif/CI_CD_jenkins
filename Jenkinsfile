@@ -44,9 +44,14 @@ agent any
                   }
                 }
               }
+            stage('stopping containers') {
+                 steps {
+                      sh "docker stop $(docker ps -q)"
+                    }
+                  }
             stage('Cleaning up') { 
             steps { 
-                sh "docker rmi $registry"
+                sh "docker rmi $registry:$BUILD_ID"
                   }
                  }
             } 
