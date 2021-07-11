@@ -1,6 +1,6 @@
 pipeline {
     environment {
-        docker Image = ''
+        dockerImage = ''
                     }
 agent any 
       stages {
@@ -16,7 +16,7 @@ agent any
 
                 steps {
                    script {
-                         docker Image = docker.build ":$BUILD_NUMBER"
+                         dockerImage = docker.build ":$BUILD_NUMBER"
                                           }
                                         }
                                      }
