@@ -5,7 +5,7 @@ pipeline {
        registry = "arifhussain123/docker_cicd"
        credentialid = 'dockerhub'
          dockerImage = ''
-         ImageName = 'arif'
+         
                     }
 agent any 
       stages {
@@ -19,7 +19,7 @@ agent any
          stage('building docker image') {
           steps {
                  script { 
-                      dockerImage = docker.build ImageName  + ":$BUILD_ID"                
+                      dockerImage = docker.build registry  + ":$BUILD_ID"                
                       
                      
                        }
