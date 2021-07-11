@@ -34,5 +34,14 @@ agent any
               }
             }
            }
+           stage('run the container') {
+               steps {
+                  script {
+                     docker.withRegistry('', credentialid) {
+                            dockerimage.run()
+                    }
+                  }
+                }
+              }
             } 
          }
