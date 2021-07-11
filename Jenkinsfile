@@ -38,7 +38,7 @@ agent any
                steps {
                   script {
                      docker.withRegistry('', credentialid) {
-                            dockerImage.run(-p 8080 80)
+                            dockerImage.run(-p 8080:80)
                     }
                   }
                 }
