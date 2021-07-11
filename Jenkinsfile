@@ -15,11 +15,11 @@ agent any
           stage('Building our image')  {
 
                 steps {
-                   script {
-                         dockerImage = docker.build ":$BUILD_NUMBER"
+                   script { dockerfile true }
+                         
                                           }
                                         }
-                                     }
+                                     
                         
                      
                        }
