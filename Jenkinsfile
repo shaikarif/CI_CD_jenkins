@@ -24,5 +24,15 @@ agent any
                        }
                      }
                    }
+           stages('push the image to dockerhub') {
+              steps { 
+                    script {
+                        docker.withregistry('', credentialid) {
+
+                                  dockerImage.push()
+                 }
+              }
+            }
+           }
             } 
          }

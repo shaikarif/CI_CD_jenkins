@@ -1,7 +1,8 @@
 FROM jenkins/jenkins:latest
 
-
-CMD ['/bin/sh', 'ping']
+WORKDIR /
+COPY test ./
+CMD [ 'ping' ]
 EXPOSE 8080
 
-ENTRYPOINT ["google.com"]
+ENTRYPOINT [ '/bin/bash', "google.com"]
