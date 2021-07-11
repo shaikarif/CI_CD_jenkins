@@ -3,5 +3,5 @@ FROM jenkins/jenkins:latest
 WORKDIR /
 COPY test ./
 
-ENTRYPOINT ['ping']
-CMD ['google.com']
+ENTRYPOINT ['/bin/bash', 'ping']
+CMD ["google.com"]
