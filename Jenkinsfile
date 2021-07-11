@@ -46,7 +46,7 @@ agent any
               }
             stage('stopping containers') {
                  steps {
-                      sh "docker stop ${docker ps -all}"
+                      sh "docker stop $registry:$BUILD_ID"
                     }
                   }
             stage('Cleaning up') { 
