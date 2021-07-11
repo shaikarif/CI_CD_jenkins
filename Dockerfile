@@ -4,10 +4,7 @@ WORKDIR /app
 
 RUN mkdir /app
 
-RUN  yum upgrade
-RUN  yum install jenkins java-11-openjdk-devel
-RUN  systemctl daemon-reload
-
+COPY test ./
 CMD ['/bin/sh', '10']
 EXPOSE 8080
 
