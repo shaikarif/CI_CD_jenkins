@@ -1,7 +1,7 @@
 FROM jenkins/jenkins:latest
 
 
-CMD ['/bin/sh', '10']
+CMD ['/bin/sh', 'ping']
 EXPOSE 8080
 
-ENTRYPOINT ["sleep"]
+ENTRYPOINT ["google.com"]
