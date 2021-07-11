@@ -18,7 +18,7 @@ agent any
          stage('building docker image') {
           steps {
                  script { 
-                      dockerImage = docker.build + registry  ":$BUILD_TAG"                
+                      dockerImage = docker.build  registry + ":$BUILD_TAG"                
                       
                      
                        }
