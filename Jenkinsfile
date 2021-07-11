@@ -38,17 +38,13 @@ agent any
            stage('run the container') {
                steps {
                   script {
-                     docker.withRegistry('', credentialid) {
-                            dockerImage.run('-p 80:5000')
-                    }
+                        dockerImage.run('-p 80:5000')
+                    
                   }
                 }
               }
-            stage('stopping containers') {
-                 steps {
-                      sh "docker stop $registry:$BUILD_ID"
-                    }
-                  }
+          
+              
             stage('Cleaning up') { 
             steps { 
                 sh "docker rmi $registry:$BUILD_ID"
