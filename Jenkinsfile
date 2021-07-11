@@ -27,7 +27,7 @@ agent any
            stage('push the image to dockerhub') {
               steps { 
                     script {
-                        docker.withregistry('', credentialid) {
+                        docker.withRegistry('', credentialid) {
 
                                   dockerImage.push()
                  }
