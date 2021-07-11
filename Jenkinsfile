@@ -15,7 +15,7 @@ agent any
                     
                      }
                 }
-         stage( 'building docker image')
+         stage('building docker image') {
           steps {
                  script { 
                       dockerImage = docker.build registry + ":$BUILD_NUMBER"                
@@ -23,5 +23,6 @@ agent any
                      
                        }
                      }
-}
-}
+                   }
+            } 
+         }
