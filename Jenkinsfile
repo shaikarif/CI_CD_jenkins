@@ -1,8 +1,6 @@
 pipeline {
-    environment {
-        dockerImage = ''
-                    }
-agent any 
+                    
+agent { dockerfile true } 
       stages {
          stage('cloning  git') {
             
@@ -11,14 +9,6 @@ agent any
                     
                      }
                 }
-
-          stage('Building our image')  {
-
-                steps {
-                   script { dockerfile true }
-                         
-                                          }
-                                        }
                                      
                         
                      
